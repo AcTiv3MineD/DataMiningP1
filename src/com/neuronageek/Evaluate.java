@@ -170,33 +170,83 @@ public class Evaluate {
 		field.set(rf, value);
 	}
 
+	public static void print( String string ){
+		System.out.println( string );
+	}
+
+	public static String read( ){
+		return System.console().readLine();
+	}
+
 	public static void main(String[] args) throws Exception {
 		RtRandomForest rf = new RtRandomForest();
 		//,1,648,16,10,2,0,3,5,1,1,0,1,1,1,0,green,0,0,0,0,1,0,0,1,0,0,black,green
 
+		print( "Enter the landmass:" );
+		rf.landmass = read();
 
-		rf.landmass = "5";
-		rf.zone = "1";
-		rf.area = 648;
-		rf.population = 0.6;
-		rf.language = "1";
-		rf.bars = "1";
-		rf.stripes = "1";
-		rf.gold = "1";
-		rf.text = "1";
-		rf.crescent = "0";
-		rf.colours = "3";
-		rf.black = "0";
-		rf.white = "1";
-		rf.red = "1";
-		rf.circles = "3";
-		rf.sunstars = "2";
-		rf.botright  = "green";
-		rf.saltires = "3";
-		rf.icon = "2";
-		rf.topleft = "black";
-		rf.green = "2";
-		rf.mainhue = "green";
+		print( "Enter the zone:" );
+		rf.zone = read();
+
+		print( "Enter the area:" );
+		rf.area = Integer.parseInt( read( ) );
+
+		print( "Enter the population");
+		rf.population = Double.parseDouble( read( ) );
+
+		print( "Enter the language");
+		rf.language = read( );
+
+		print( "Enter the number of bars");
+		rf.bars = read();
+
+		print( "Enter the number of stripes ");
+		rf.stripes = read( );
+
+		print( "Enter the gold");
+		rf.gold = read();
+
+		print( "Enter the text");
+		rf.text = read();
+
+		print( "Enter the crescent");
+		rf.crescent = read();
+
+		print( "Enter the numer of colours");
+		rf.colours = read();
+
+		print( "Enter the black");
+		rf.black = read( );
+
+		print( "Enter the white");
+		rf.white = read();
+
+		print( "Enter the red");
+		rf.red = read();
+
+		print( "Enter the number of circles");
+		rf.circles = read();
+
+		print( "Enter the number of sunstars");
+		rf.sunstars = read();
+
+		print( "Enter the botright");
+		rf.botright  = read();
+
+		print( "Enter the saltires");
+		rf.saltires = read();
+
+		print( "Enter the icon");
+		rf.icon = read();
+
+		print( "Enter the topleft");
+		rf.topleft = read();
+
+		print( "Enter the green:");
+		rf.green = read();
+
+		print( "Enter the mainhue");
+		rf.mainhue = read();
 		//File testData = new File("data/inputs.csv");
 		//boolean exists = testData.exists();
 		//System.out.println(testData.getAbsolutePath() + ", exists == " + exists);
