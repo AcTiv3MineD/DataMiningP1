@@ -1,10 +1,12 @@
 package com.neuronageek;
 
 import java.io.BufferedReader;
+import java.io.Console;
 import java.io.File;
 import java.io.FileReader;
 import java.lang.reflect.Field;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 /**
  * This class allows a basic evaluation of a classifier's performance
@@ -175,7 +177,10 @@ public class Evaluate {
 	}
 
 	public static String read( ){
-		return System.console().readLine();
+		String data;
+
+		Scanner scanInput = new Scanner(System.in);
+		return scanInput.nextLine();
 	}
 
 	public static void main(String[] args) throws Exception {
